@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 sg.theme('DarkAmber')
 
-layout = [[sg.Text(('Enter something on Row 2'), key='-TEXT-')],
+layout = [[sg.In(enable_events=True, do_not_clear=False, key='_IN_', size=(30, 3))],
           [sg.Button('7', size=(5, 1), key='_BUTTON_7_'), sg.Button('8', size=(5, 1), key='_BUTTON_8_'),
            sg.Button('9', size=(5, 1), key='_BUTTON_9_'),
            sg.Button(' + ', button_color=('black', 'orange'), size=(5, 1), key='_BUTTON_SUM_')],
@@ -18,14 +18,15 @@ layout = [[sg.Text(('Enter something on Row 2'), key='-TEXT-')],
            sg.Button(' ÷ ', button_color=('black', 'orange'), size=(5, 1), key='_BUTTON_DIV_')]
           ]
 
-window = sg.Window('Calculadora', layout)
-
-window['-TEXT-'].update('My new text value')
+window = sg.Window('Calculadora', layout, return_keyboard_events=True)
 
 while True:
     event, values = window.read()
+
+    num = float(values['_IN_']);
+
     if event == '_BUTTON_1_':
-        print(event);
+        print(num)
     if event == '_BUTTON_2_':
         print(event);
     if event == '_BUTTON_3_':
@@ -45,16 +46,36 @@ while True:
     if event == '_BUTTON_0_':
         print(event);
     if event == '_BUTTON_SUM_':
-        print(event);
+        n1 = num;
+        op = "soma";
+        window['_IN_'].update(value=[0])
     if event == '_BUTTON_SUB_':
-        print(event);
+        n1 = num;
+        op = "sub";
+        window['_IN_'].update(value=[0])
     if event == '_BUTTON_M_':
-        print(event);
+        n1 = num;
+        op = "mult";
+        window['_IN_'].update(value=[0])
     if event == '_BUTTON_DIV_':
-        print(event);
+        n1 = num;
+        op = "div";
+        window['_IN_'].update(value=[0])
     if event == '_BUTTON_DEL_':
         print(event);
     if event == '_BUTTON_RESULT_':
-        print(event);
+        n2 = num;
+        if op == 'soma':
+            soma = n1+n2
+            window['_IN_'].update(value=[soma]);
+        if op == 'sub':
+            sub = n1-n2
+            window['_IN_'].update(value=[sub]);
+        if op == 'mult':
+            mult = n1*n2
+            window['_IN_'].update(value=[mult]);
+        if op == 'div':
+            div = n1/n2
+            window['_IN_'].update(value=[div]);
     if event == sg.WIN_CLOSED:
-        break
+        break;
