@@ -25,10 +25,10 @@ while True:
 
     #num = float(values['_IN_']);
 
-    if event == '_BUTTON_DEL_':  # clear keys if clear button
+    if event == '_BUTTON_DEL_':
         keys_entered = '';
     elif event in '1234567890':
-        keys_entered = values['_IN_']  # get what's been entered so far
+        keys_entered = values['_IN_']
         keys_entered += event
         print(keys_entered)
         window['_IN_'].update(value=[keys_entered])
