@@ -2,5 +2,5 @@
 *.html linguist-detectable=false
 *.TeX linguist-detectable=false
 *.python linguist-detectable=true
-*.xml linguist-detectable=true
+*.xml linguist-detectable=false
 *.html linguist-language=Python
