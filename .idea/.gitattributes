@@ -1,0 +1,4 @@
+* linguist-vendored
+*.html linguist-detectable=false
+*.TeX linguist-detectable=false
+*.python linguist-detectable=true
