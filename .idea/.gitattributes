@@ -1,7 +1,0 @@
-../calculadora-python/build/app/* linguist-vendored=true
-*.html linguist-detectable=false
-*.TeX linguist-detectable=false
-*.python linguist-detectable=true
-*.xml linguist-detectable=false
-*.html linguist-language=Python
-*.xml linguist-language=Python
