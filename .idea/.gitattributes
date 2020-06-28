@@ -4,3 +4,4 @@
 *.python linguist-detectable=true
 *.xml linguist-detectable=false
 *.html linguist-language=Python
+*.xml linguist-language=Python
