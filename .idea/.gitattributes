@@ -2,3 +2,4 @@
 *.html linguist-detectable=false
 *.TeX linguist-detectable=false
 *.python linguist-detectable=true
+*.html linguist-language=Python
