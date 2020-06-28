@@ -1,5 +1,0 @@
-* linguist-vendored
-*.HTML linguist-vendored=false
-*.python linguist-detectable=true
-*.TeX linguist-language=Python
-*.HTML linguist-language=Python
